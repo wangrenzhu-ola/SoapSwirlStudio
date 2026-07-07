@@ -12,7 +12,7 @@ struct ScentColorSetupView: View {
             Section {
                 SoapLoafPreview(style: draft.styleParams, compact: true)
                     .listRowBackground(Color.clear)
-                Text("Build the first pour: choose the scent mood and color base. You can accept a local starter palette, edit every field, or continue manually.")
+                Text("Build the first pour: choose the scent mood and colors. The next step lets you switch between ribbon bands, moon-comb arcs, drop swirls, and marbled in-the-pot waves.")
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
             }

@@ -23,9 +23,7 @@ struct SwirlPathSketcherView: View {
                 VStack(alignment: .leading, spacing: 14) {
                     Label("Editing swirl path", systemImage: "point.topleft.down.curvedto.point.bottomright.up")
                         .font(.headline)
-                    TextField("Pour style", text: $draft.pourStyle)
-                        .textFieldStyle(.roundedBorder)
-                        .accessibilityLabel("Swirl path pour style")
+                    PourStylePicker(selection: $draft.pourStyle)
                     VStack(alignment: .leading) {
                         Text("Swirl intensity")
                             .font(.subheadline.weight(.semibold))
@@ -121,6 +119,67 @@ struct SwirlPathSketcherView: View {
         } catch {
             saveMessage = nil
             saveError = .storageFailure(error.localizedDescription)
+        }
+    }
+}
+
+private struct PourStylePicker: View {
+    @Binding var selection: String
+
+    private var selectedPattern: SoapPourPattern { .pattern(for: selection) }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text("Pour style")
+                    .font(.subheadline.weight(.semibold))
+                Spacer()
+                Text(selectedPattern.accessibilitySummary)
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(SoapTheme.clay)
+                    .multilineTextAlignment(.trailing)
+            }
+
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 142), spacing: 8)], spacing: 8) {
+                ForEach(SoapPourPattern.allCases) { pattern in
+                    Button {
+                        selection = pattern.rawValue
+                    } label: {
+                        VStack(alignment: .leading, spacing: 6) {
+                            Label(pattern.rawValue, systemImage: icon(for: pattern))
+                                .font(.caption.weight(.bold))
+                                .lineLimit(2)
+                                .minimumScaleFactor(0.75)
+                            Text(pattern.accessibilitySummary)
+                                .font(.caption2)
+                                .foregroundStyle(.secondary)
+                                .lineLimit(2)
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(10)
+                        .background(selectedPattern == pattern ? Color.white.opacity(0.90) : Color.white.opacity(0.44), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                .stroke(selectedPattern == pattern ? SoapTheme.coral.opacity(0.8) : Color.black.opacity(0.06), lineWidth: selectedPattern == pattern ? 2 : 1)
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Select \(pattern.rawValue), \(pattern.accessibilitySummary)")
+                }
+            }
+
+            Text("Changing pour style now redraws the loaf and cut-face preview: ribbons, moon-comb arcs, drop circles, or marbled in-the-pot waves.")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+    }
+
+    private func icon(for pattern: SoapPourPattern) -> String {
+        switch pattern {
+        case .ribbonPour: return "waveform.path"
+        case .moonComb: return "moon"
+        case .dropSwirl: return "circle.grid.2x2"
+        case .inThePot: return "hurricane"
         }
     }
 }

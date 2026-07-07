@@ -87,3 +87,23 @@ final class SoapSwirlStoreTests: XCTestCase {
     }
 
 }
+
+@MainActor
+final class SoapPourPatternTests: XCTestCase {
+    func testPourStyleNamesMapToDistinctVisualPatterns() {
+        XCTAssertEqual(SoapPourPattern.pattern(for: "Ribbon pour"), .ribbonPour)
+        XCTAssertEqual(SoapPourPattern.pattern(for: "Moon comb pull"), .moonComb)
+        XCTAssertEqual(SoapPourPattern.pattern(for: "Drop swirl"), .dropSwirl)
+        XCTAssertEqual(SoapPourPattern.pattern(for: "In-the-pot swirl"), .inThePot)
+        XCTAssertEqual(SoapPourPattern.pattern(for: "marble pot blend"), .inThePot)
+    }
+
+    func testAllPourPatternsExposeUserReadableVisualSummaries() {
+        let summaries = SoapPourPattern.allCases.map(\.accessibilitySummary)
+        XCTAssertEqual(Set(summaries).count, SoapPourPattern.allCases.count)
+        XCTAssertTrue(summaries.contains("long flowing ribbon bands"))
+        XCTAssertTrue(summaries.contains("curved crescent comb arcs"))
+        XCTAssertTrue(summaries.contains("scattered drop swirl circles"))
+        XCTAssertTrue(summaries.contains("marbled in-the-pot waves"))
+    }
+}

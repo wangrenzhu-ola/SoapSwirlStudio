@@ -30,6 +30,36 @@ struct SoapSwirlStyleParams: Codable, Hashable {
     )
 }
 
+enum SoapPourPattern: String, CaseIterable, Identifiable, Hashable {
+    case ribbonPour = "Ribbon pour"
+    case moonComb = "Moon comb"
+    case dropSwirl = "Drop swirl"
+    case inThePot = "In-the-pot swirl"
+
+    var id: String { rawValue }
+
+    var accessibilitySummary: String {
+        switch self {
+        case .ribbonPour:
+            return "long flowing ribbon bands"
+        case .moonComb:
+            return "curved crescent comb arcs"
+        case .dropSwirl:
+            return "scattered drop swirl circles"
+        case .inThePot:
+            return "marbled in-the-pot waves"
+        }
+    }
+
+    static func pattern(for pourStyle: String) -> SoapPourPattern {
+        let normalized = pourStyle.lowercased()
+        if normalized.contains("moon") || normalized.contains("comb") { return .moonComb }
+        if normalized.contains("drop") { return .dropSwirl }
+        if normalized.contains("pot") || normalized.contains("marble") { return .inThePot }
+        return .ribbonPour
+    }
+}
+
 struct StarterExample: Identifiable, Codable, Hashable {
     var id: UUID
     var title: String
