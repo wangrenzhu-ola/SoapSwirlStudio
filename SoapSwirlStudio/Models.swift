@@ -125,6 +125,7 @@ enum SoapRoute: Hashable {
     case sketcher(SoapSwirlDraft)
     case detail(UUID)
     case premium
+    case legalPrivacy
 }
 
 extension Color {

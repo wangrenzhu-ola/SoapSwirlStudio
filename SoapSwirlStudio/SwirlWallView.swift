@@ -28,7 +28,9 @@ struct SwirlWallView: View {
                 }
 
                 StarterExamplesSection()
-                PrivacyNoticeCard()
+                PrivacyNoticeCard {
+                    path.append(.legalPrivacy)
+                }
             }
             .padding(20)
         }

@@ -108,6 +108,8 @@ struct SoapStatusPill: View {
 }
 
 struct PrivacyNoticeCard: View {
+    var openLegalSurface: (() -> Void)?
+
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Label("Privacy note", systemImage: "lock.shield")
@@ -115,6 +117,15 @@ struct PrivacyNoticeCard: View {
             Text("Your soap swirl sketches are stored locally on this device. Starter examples are local placeholders, not online recipes or a live service.")
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
+            if let openLegalSurface {
+                Button {
+                    openLegalSurface()
+                } label: {
+                    Label("Privacy Policy & User Agreement", systemImage: "doc.text.magnifyingglass")
+                }
+                .buttonStyle(.bordered)
+                .accessibilityLabel("Open Privacy Policy and User Agreement")
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
