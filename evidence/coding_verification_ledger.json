@@ -1,0 +1,127 @@
+{
+  "schema_version": "appfactory.coding_verification_ledger.v1",
+  "run_id": "goal-010-soapswirl-studio-6291e8fa91",
+  "app_name": "SoapSwirl Studio",
+  "repo_path": "/Users/wangrenzhu/work/SoapSwirlStudio",
+  "repo_url": "https://github.com/wangrenzhu-ola/SoapSwirlStudio",
+  "xcodeproj_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj",
+  "pm_inputs_read": [
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/rough_app_runs/goal-010-soapswirl-studio-6291e8fa91/rough_app_goal.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/goal_manifest.json",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/package_goal_map.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/design_blueprint.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_matrix.json",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/pm_brief.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/current_version_requirements.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_gates.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/design_qa_gates.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/product_goal.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/feature_blocks.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance.md"
+  ],
+  "source_commits": [
+    "4c97c30d70215c84c656189da303b5b1d1c5e714"
+  ],
+  "build_checks": [
+    {
+      "name": "xcodebuild_list",
+      "status": "pass",
+      "command": "xcodebuild -list -project SoapSwirlStudio.xcodeproj",
+      "evidence_ref": "evidence/xcodebuild_list.log"
+    },
+    {
+      "name": "xcodebuild_build",
+      "status": "pass",
+      "command": "xcodebuild -project SoapSwirlStudio.xcodeproj -scheme SoapSwirlStudio -destination platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5 -derivedDataPath build/DerivedData build",
+      "evidence_ref": "evidence/xcodebuild_build.log",
+      "marker": "** BUILD SUCCEEDED **"
+    },
+    {
+      "name": "xcodebuild_test",
+      "status": "pass",
+      "command": "xcodebuild -project SoapSwirlStudio.xcodeproj -scheme SoapSwirlStudio -destination platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5 -derivedDataPath build/DerivedData test",
+      "evidence_ref": "evidence/xcodebuild_test.log",
+      "marker": "** TEST SUCCEEDED **"
+    }
+  ],
+  "runtime_checks": [
+    {
+      "name": "simulator_install_launch_screenshot",
+      "status": "pass",
+      "command": "xcrun simctl install/launch/io screenshot",
+      "evidence_ref": "evidence/simulator_runtime.log",
+      "screenshot_ref": "evidence/soapswirl_launch.png"
+    }
+  ],
+  "requirement_results": [
+    {
+      "requirement_id": "REQ-CRUD-001",
+      "status": "pass",
+      "evidence": "Create/edit/delete SwiftUI paths plus SoapSwirlStore save/delete tests."
+    },
+    {
+      "requirement_id": "REQ-PERSIST-001",
+      "status": "pass",
+      "evidence": "Local JSON persistence with relaunch-style reload unit test."
+    },
+    {
+      "requirement_id": "REQ-VIS-001",
+      "status": "pass",
+      "evidence": "SoapLoafPreview, SwirlRibbon, CutFacePreview visible in normal flow and screenshot."
+    },
+    {
+      "requirement_id": "REQ-EMPTY-001",
+      "status": "pass",
+      "evidence": "Swirl Wall empty state is soap swirl sketch-specific."
+    },
+    {
+      "requirement_id": "REQ-ERROR-001",
+      "status": "pass",
+      "evidence": "Save recovery path preserves draft and is unit-tested."
+    },
+    {
+      "requirement_id": "REQ-PRIVACY-001",
+      "status": "pass",
+      "evidence": "PrivacyNoticeCard and PrivacyInfo.xcprivacy disclose local-only storage/starter examples."
+    },
+    {
+      "requirement_id": "REQ-PREMIUM-001",
+      "status": "pass",
+      "evidence": "Premium Local Packs StoreKit product lookup/purchase/restore path does not block base creation."
+    },
+    {
+      "requirement_id": "REQ-AI-001",
+      "status": "pass",
+      "evidence": "Local starter palette suggestions are editable/skippable/user-confirmed."
+    },
+    {
+      "requirement_id": "REQ-APPINTENT-001",
+      "status": "pass",
+      "evidence": "QuickCaptureSoapSwirlIntent compiles, creates editable draft, returns manual fallback dialog on failure."
+    },
+    {
+      "requirement_id": "REQ-LOCALE-001",
+      "status": "pass",
+      "evidence": "User-facing app source and metadata are en-US; runtime screenshot shows en-US marker."
+    }
+  ],
+  "design_results": [
+    {
+      "design_gate": "five_main_screens",
+      "status": "pass",
+      "evidence": "Swirl Wall, Scent Color Setup, Swirl Path Sketcher, Detail, Premium Local Packs."
+    },
+    {
+      "design_gate": "product_specific_visual_slots",
+      "status": "pass",
+      "evidence": "Handmade soap loaf, swirl path, and cut-face preview visible in evidence/soapswirl_launch.png."
+    },
+    {
+      "design_gate": "native_mobile_taste",
+      "status": "pass",
+      "evidence": "Warm cream/coral/sage SwiftUI visual route; internal-process copy polished after subagent review."
+    }
+  ],
+  "known_gaps": [],
+  "completion_decision": "rough_built"
+}
