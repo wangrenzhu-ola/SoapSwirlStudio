@@ -17,9 +17,25 @@
     "evidence/xcodebuild_build.log",
     "evidence/xcodebuild_test.log",
     "evidence/simulator_runtime.log",
-    "evidence/soapswirl_launch.png"
+    "evidence/soapswirl_launch.png",
+    "evidence/patchback_round_1/patchback_evidence_ledger.json",
+    "evidence/patchback_round_1/runtime_walkthrough_readback.json",
+    "evidence/patchback_round_1/ios_iap_acceptance.json",
+    "evidence/patchback_round_1/ios_compliance_acceptance.json",
+    "evidence/patchback_round_1/release_readiness_report.json",
+    "evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+    "evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+    "evidence/patchback_round_1/simulator_install_launch_final_head.log",
+    "evidence/patchback_round_1/soapswirl_release_launch.png"
   ],
-  "known_gaps": [],
+  "known_gaps": [
+    {
+      "blocker_code": "ios_archive_signing_development_team_missing",
+      "evidence_ref": "evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+      "note": "Release simulator build passed; physical iOS archive/export requires a configured Apple development team/signing identity."
+    }
+  ],
   "implemented_requirement_ids": [
     "REQ-CRUD-001",
     "REQ-PERSIST-001",
@@ -41,7 +57,7 @@
     {
       "requirement_id": "REQ-PERSIST-001",
       "status": "pass",
-      "evidence": "Local JSON persistence with relaunch-style reload unit test."
+      "evidence": "Simulator xcodebuild acceptance test logs PATCHBACK_PERSISTENCE_RELAUNCH_READBACK with same saved title/id after relaunch-style store reload."
     },
     {
       "requirement_id": "REQ-VIS-001",
@@ -61,12 +77,12 @@
     {
       "requirement_id": "REQ-PRIVACY-001",
       "status": "pass",
-      "evidence": "PrivacyNoticeCard and PrivacyInfo.xcprivacy disclose local-only storage/starter examples."
+      "evidence": "Reachable in-app Privacy Policy/User Agreement route plus PrivacyInfo.xcprivacy no tracking/no collected data, verified by PATCHBACK_LEGAL_PRIVACY_SURFACE."
     },
     {
       "requirement_id": "REQ-PREMIUM-001",
       "status": "pass",
-      "evidence": "Premium Local Packs StoreKit product lookup/purchase/restore path does not block base creation."
+      "evidence": "Tracked StoreKit config for com.soapswirl.studio.premium.localpacks plus simulator IAP smoke marker PATCHBACK_STOREKIT_SMOKE; base creation remains free/unblocked."
     },
     {
       "requirement_id": "REQ-AI-001",
@@ -101,5 +117,11 @@
       "evidence": "Warm cream/coral/sage SwiftUI visual route; internal-process copy polished after subagent review."
     }
   ],
-  "status": "rough_built"
+  "status": "rough_built",
+  "patchback_round_1": {
+    "git_head": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+    "input_patch_spec_ref": "evidence/patch_spec_round_1_clean.json",
+    "status": "patched_with_signing_limitation",
+    "evidence_ledger_ref": "evidence/patchback_round_1/patchback_evidence_ledger.json"
+  }
 }

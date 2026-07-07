@@ -1,0 +1,5 @@
+patchback_round=1
+timestamp_utc=2026-07-07T14:18:05Z
+git_head=678c3b7b447c2407d9e747c70bdde5d32c3b90b4
+branch=codex/soapswirl-completeness-patchback
+bundle_id=com.soapswirl.studio

@@ -1,0 +1,15 @@
+timestamp_utc=2026-07-07T14:18:57Z
+git_head=678c3b7b447c2407d9e747c70bdde5d32c3b90b4
+app_path=build/DerivedData/Build/Products/Release-iphonesimulator/SoapSwirlStudio.app
+bundle_id=com.soapswirl.studio
+booted_devices_before=== Devices == -- iOS 26.4 -- -- iOS 26.5 --     iPhone 17 Pro (93FD8455-C95F-4F7F-ABB3-0EA67A6E43EA) (Booted)  
+selected_device=93FD8455-C95F-4F7F-ABB3-0EA67A6E43EA
+install_start=2026-07-07T14:18:57Z
+launch_start=2026-07-07T14:18:58Z
+com.soapswirl.studio: 69996
+Detected file type from extension: PNG
+Note: No display specified. Defaulting to display: 7B1FE579-97B8-45D3-9952-6506B21C6996 (screenID: 1, name: LCD)
+Wrote screenshot to: /Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png
+screenshot=evidence/patchback_round_1/soapswirl_release_launch.png
+launch_end=2026-07-07T14:19:03Z
+booted_devices_after=== Devices == -- iOS 26.4 -- -- iOS 26.5 --     iPhone 17 Pro (93FD8455-C95F-4F7F-ABB3-0EA67A6E43EA) (Booted)  

@@ -1,0 +1,23 @@
+{
+  "schema_version": "appfactory.ios_iap_acceptance.v1",
+  "created_at": "2026-07-07T14:19:43Z",
+  "git_head": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+  "status": "pass_with_storekit_unavailable_fallback",
+  "monetization_model": "premium_unlock_local_visual_packs",
+  "product_id": "com.soapswirl.studio.premium.localpacks",
+  "storekit_config_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/StoreKit/SoapSwirlStudio.storekit",
+  "scheme_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/xcshareddata/xcschemes/SoapSwirlStudio.xcscheme",
+  "base_creation_blocked": false,
+  "test_markers": {
+    "config_product_id_present": true,
+    "purchase_unavailable_fallback_logged": true,
+    "fetched_products_empty_in_simulator": true
+  },
+  "evidence_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/ios/package_manifest.json"
+  ],
+  "notes": [
+    "Local StoreKit config is tracked and wired into the shared scheme. Simulator Product.products returned unavailable/empty in this environment; acceptance test exercised the unavailable purchase fallback and verified base creation is not blocked."
+  ]
+}

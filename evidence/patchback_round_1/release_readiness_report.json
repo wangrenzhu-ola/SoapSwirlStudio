@@ -1,0 +1,38 @@
+{
+  "schema_version": "appfactory.release_readiness.v1",
+  "created_at": "2026-07-07T14:19:43Z",
+  "git_head": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+  "branch": "codex/soapswirl-completeness-patchback",
+  "status": "ready_for_finalgate_with_signing_limitation",
+  "version_readback": {
+    "CFBundleIdentifier": "com.soapswirl.studio",
+    "CFBundleShortVersionString": "0.1.0",
+    "CFBundleVersion": "1",
+    "built_info_plist": "/Users/wangrenzhu/work/SoapSwirlStudio/build/DerivedData/Build/Products/Release-iphonesimulator/SoapSwirlStudio.app/Info.plist"
+  },
+  "bundle_identifier": "com.soapswirl.studio",
+  "locale": "en-US",
+  "release_checks": {
+    "xcodebuild_test": "pass",
+    "release_simulator_build": "pass",
+    "archive_attempt": "blocked_by_signing",
+    "privacy_compliance": "pass",
+    "iap_acceptance": "pass_with_storekit_unavailable_fallback",
+    "simulator_install_launch": "pass"
+  },
+  "signing_limitation": {
+    "blocker_code": "ios_archive_signing_development_team_missing",
+    "archive_exit": "archive_exit_code=",
+    "exact_xcode_message": "Signing for \"SoapSwirlStudio\" requires a development team. Select a development team in the Signing & Capabilities editor.",
+    "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log"
+  },
+  "evidence_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_list_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json"
+  ]
+}

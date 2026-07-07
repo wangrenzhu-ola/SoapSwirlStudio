@@ -1,0 +1,18 @@
+{
+  "schema_version": "appfactory.patchback_evidence_ledger.v1",
+  "created_at": "2026-07-07T14:19:43Z",
+  "git_head": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+  "patch_spec_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patch_spec_round_1_clean.json",
+  "evidence_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/head_readback.txt",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png"
+  ]
+}
