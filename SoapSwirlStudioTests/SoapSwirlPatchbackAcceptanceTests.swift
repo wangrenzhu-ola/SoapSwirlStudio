@@ -65,13 +65,15 @@ final class SoapSwirlPatchbackAcceptanceTests: XCTestCase {
         XCTAssertFalse(premiumStore.baseCreationBlocked)
         await premiumStore.refreshStoreKitStatus()
         XCTAssertFalse(premiumStore.baseCreationBlocked)
+        await premiumStore.purchaseLocalPacks()
+        XCTAssertFalse(premiumStore.baseCreationBlocked)
         XCTAssertTrue(
             premiumStore.products.contains { $0.id == "com.soapswirl.studio.premium.localpacks" } ||
             premiumStore.message.localizedCaseInsensitiveContains("available") ||
             String(describing: premiumStore.entitlementState).localizedCaseInsensitiveContains("unavailable")
         )
 
-        print("PATCHBACK_STOREKIT_SMOKE configProductIDs=\(productIDs.joined(separator: ",")) fetchedProducts=\(premiumStore.products.map(\.id).joined(separator: ",")) baseCreationBlocked=\(premiumStore.baseCreationBlocked) state=\(String(describing: premiumStore.entitlementState))")
+        print("PATCHBACK_STOREKIT_SMOKE configProductIDs=\(productIDs.joined(separator: ",")) fetchedProducts=\(premiumStore.products.map(\.id).joined(separator: ",")) purchaseFallbackMessage=\(premiumStore.message) baseCreationBlocked=\(premiumStore.baseCreationBlocked) state=\(String(describing: premiumStore.entitlementState))")
     }
 
     func testPatchbackLegalPrivacySurfacesStayLocalOnlyAndReachable() throws {
