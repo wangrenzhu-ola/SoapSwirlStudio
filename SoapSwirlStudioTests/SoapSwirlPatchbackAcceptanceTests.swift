@@ -77,18 +77,18 @@ final class SoapSwirlPatchbackAcceptanceTests: XCTestCase {
     }
 
     func testPatchbackLegalPrivacySurfacesStayLocalOnlyAndReachable() throws {
-        let privacyInfo = try String(contentsOf: Self.repoRoot().appendingPathComponent("SoapSwirlStudio/PrivacyInfo.xcprivacy"))
+        let privacyInfo = try String(contentsOf: Self.repoRoot().appendingPathComponent("SoapSwirlStudio/PrivacyInfo.xcprivacy"), encoding: .utf8)
         XCTAssertTrue(privacyInfo.contains("NSPrivacyTracking"))
         XCTAssertTrue(privacyInfo.contains("<false/>"))
         XCTAssertTrue(privacyInfo.contains("NSPrivacyCollectedDataTypes"))
 
-        let legalView = try String(contentsOf: Self.repoRoot().appendingPathComponent("SoapSwirlStudio/LegalPrivacyView.swift"))
+        let legalView = try String(contentsOf: Self.repoRoot().appendingPathComponent("SoapSwirlStudio/LegalPrivacyView.swift"), encoding: .utf8)
         XCTAssertTrue(legalView.contains("Privacy Policy"))
         XCTAssertTrue(legalView.contains("User Agreement"))
         XCTAssertTrue(legalView.contains("does not use tracking"))
         XCTAssertTrue(legalView.contains("Premium Local Packs are an optional non-consumable unlock"))
 
-        let wallView = try String(contentsOf: Self.repoRoot().appendingPathComponent("SoapSwirlStudio/SwirlWallView.swift"))
+        let wallView = try String(contentsOf: Self.repoRoot().appendingPathComponent("SoapSwirlStudio/SwirlWallView.swift"), encoding: .utf8)
         XCTAssertTrue(wallView.contains("path.append(.legalPrivacy)"))
 
         print("PATCHBACK_LEGAL_PRIVACY_SURFACE reachable=SwirlWall PrivacyNoticeCard localOnly=true tracking=false collectedData=false")
