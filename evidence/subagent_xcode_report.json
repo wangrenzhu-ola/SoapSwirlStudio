@@ -1,0 +1,30 @@
+{
+  "schema_version": "appfactory.subagent_xcode_report.v1",
+  "note": "Initial TestXcodeAgent saw pre-fix compile errors; leader fixed Combine imports and reran final checks.",
+  "final_commands": [
+    {
+      "command": "xcodebuild -list -project SoapSwirlStudio.xcodeproj",
+      "exit_code": 0,
+      "evidence_ref": "evidence/xcodebuild_list.log"
+    },
+    {
+      "command": "xcodebuild -project SoapSwirlStudio.xcodeproj -scheme SoapSwirlStudio -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5' -derivedDataPath build/DerivedData build",
+      "exit_code": 0,
+      "evidence_ref": "evidence/xcodebuild_build.log",
+      "marker": "** BUILD SUCCEEDED **"
+    },
+    {
+      "command": "xcodebuild -project SoapSwirlStudio.xcodeproj -scheme SoapSwirlStudio -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.5' -derivedDataPath build/DerivedData test",
+      "exit_code": 0,
+      "evidence_ref": "evidence/xcodebuild_test.log",
+      "marker": "** TEST SUCCEEDED **"
+    },
+    {
+      "command": "xcrun simctl install/launch/screenshot iPhone 17 Pro",
+      "exit_code": 0,
+      "evidence_ref": "evidence/simulator_runtime.log",
+      "screenshot_ref": "evidence/soapswirl_launch.png"
+    }
+  ],
+  "blockers": []
+}

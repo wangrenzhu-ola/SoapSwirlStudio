@@ -6,5 +6,6 @@
   "xcodeproj": "SoapSwirlStudio.xcodeproj",
   "minimum_ios": "26.0",
   "privacy": "Local-only JSON persistence; no tracking, no backend, no cloud sync.",
-  "premium_model": "premium_unlock_local_visual_packs"
+  "premium_model": "premium_unlock_local_visual_packs",
+  "app_intent": "QuickCaptureSoapSwirlIntent"
 }

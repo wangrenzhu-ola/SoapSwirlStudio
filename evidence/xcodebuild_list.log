@@ -1,0 +1,19 @@
+# xcodebuild -list
+2026-07-07T13:37:18Z
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -list -project SoapSwirlStudio.xcodeproj
+
+Information about project "SoapSwirlStudio":
+    Targets:
+        SoapSwirlStudio
+        SoapSwirlStudioTests
+
+    Build Configurations:
+        Debug
+        Release
+
+    If no build configuration is specified and -scheme is not passed then "Release" is used.
+
+    Schemes:
+        SoapSwirlStudio
+
