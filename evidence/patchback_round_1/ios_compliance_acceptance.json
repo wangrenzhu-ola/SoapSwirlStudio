@@ -1,0 +1,21 @@
+{
+  "schema_version": "appfactory.ios_compliance_acceptance.v1",
+  "created_at": "2026-07-07T14:19:43Z",
+  "git_head": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+  "status": "pass",
+  "privacy_model": "local-only/no tracking/no collected data/no backend/no photos/no ATT",
+  "legal_surface_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/LegalPrivacyView.swift",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/Docs/PrivacyPolicy.md",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PrivacyInfo.xcprivacy"
+  ],
+  "reachable_ui_ref": "SwirlWallView -> PrivacyNoticeCard -> .legalPrivacy route",
+  "test_markers": {
+    "privacyinfo_tracking_false": true,
+    "legal_privacy_marker": true
+  },
+  "evidence_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json"
+  ]
+}

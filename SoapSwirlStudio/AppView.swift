@@ -17,6 +17,8 @@ struct AppView: View {
                         SoapSwirlDetailView(recordID: id, path: $path)
                     case .premium:
                         PremiumLocalPacksView()
+                    case .legalPrivacy:
+                        LegalPrivacyView()
                     }
                 }
         }

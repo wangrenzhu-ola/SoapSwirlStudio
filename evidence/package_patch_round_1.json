@@ -1,0 +1,192 @@
+{
+  "schema_version": "appfactory.package_patch.v1",
+  "run_id": "goal-010-soapswirl-studio-round-1-patchback",
+  "patch_cycle": 1,
+  "created_at": "2026-07-07T14:20:28Z",
+  "status": "patched",
+  "input_patch_spec_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patch_spec_round_1_clean.json",
+  "repo_path": "/Users/wangrenzhu/work/SoapSwirlStudio",
+  "github_repo_url": "https://github.com/wangrenzhu-ola/SoapSwirlStudio.git",
+  "branch": "codex/soapswirl-completeness-patchback",
+  "base_commit": "b08d29f1418be6bbd434fd4a2f2c1934d827746d",
+  "head_commit": "ec8bdfc425e2a8ee5c08be5bcb30e1d2e16100c0",
+  "commit_refs": [
+    "83ba57b4b922bf655529adaf7cb1a9d2b18f4006",
+    "573c13e0519d047ed5d44c47e7958fdcc9bdcc94",
+    "e4c00a84e21917a21e199f79c046b881413e9c86",
+    "83b3b60f0e344206ef6510357a70cdb20047c077",
+    "a475eb7f85e6cc6d3017f6dd7f8d5fd93f8ab567",
+    "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+    "ec8bdfc425e2a8ee5c08be5bcb30e1d2e16100c0"
+  ],
+  "commit_history": [
+    {
+      "commit": "83ba57b4b922bf655529adaf7cb1a9d2b18f4006",
+      "subject": "Add reachable legal and privacy surface"
+    },
+    {
+      "commit": "573c13e0519d047ed5d44c47e7958fdcc9bdcc94",
+      "subject": "Add StoreKit premium local pack configuration"
+    },
+    {
+      "commit": "e4c00a84e21917a21e199f79c046b881413e9c86",
+      "subject": "Add patchback runtime persistence acceptance tests"
+    },
+    {
+      "commit": "83b3b60f0e344206ef6510357a70cdb20047c077",
+      "subject": "Exercise StoreKit unavailable purchase fallback"
+    },
+    {
+      "commit": "a475eb7f85e6cc6d3017f6dd7f8d5fd93f8ab567",
+      "subject": "Wire scheme to local StoreKit configuration"
+    },
+    {
+      "commit": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+      "subject": "Clean patchback acceptance test warnings"
+    },
+    {
+      "commit": "ec8bdfc425e2a8ee5c08be5bcb30e1d2e16100c0",
+      "subject": "Record patchback runtime and release evidence"
+    }
+  ],
+  "changed_files": [
+    "Docs/PrivacyPolicy.md",
+    "SoapSwirlStudio.xcodeproj/xcshareddata/xcschemes/SoapSwirlStudio.xcscheme",
+    "SoapSwirlStudio/AppView.swift",
+    "SoapSwirlStudio/LegalPrivacyView.swift",
+    "SoapSwirlStudio/Models.swift",
+    "SoapSwirlStudio/StoreKit/SoapSwirlStudio.storekit",
+    "SoapSwirlStudio/SwirlWallView.swift",
+    "SoapSwirlStudio/VisualComponents.swift",
+    "SoapSwirlStudioTests/SoapSwirlPatchbackAcceptanceTests.swift",
+    "evidence/finalgate_round_1_clean.json",
+    "evidence/patch_spec_round_1_clean.json",
+    "evidence/patchback_round_1/archive_status.txt",
+    "evidence/patchback_round_1/head_readback.txt",
+    "evidence/patchback_round_1/ios_compliance_acceptance.json",
+    "evidence/patchback_round_1/ios_iap_acceptance.json",
+    "evidence/patchback_round_1/patchback_evidence_ledger.json",
+    "evidence/patchback_round_1/release_readiness_report.json",
+    "evidence/patchback_round_1/runtime_walkthrough_readback.json",
+    "evidence/patchback_round_1/simulator_install_launch_final_head.log",
+    "evidence/patchback_round_1/soapswirl_release_launch.png",
+    "evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+    "evidence/patchback_round_1/xcodebuild_list_final_head.log",
+    "evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+    "evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "ios/package_manifest.json",
+    "rough_app_build.json",
+    "evidence/patchback_round_1/git_diff_check.log"
+  ],
+  "evidence_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/patchback_evidence_ledger.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/git_diff_check.log"
+  ],
+  "verification": [
+    {
+      "check": "xcodebuild test -project SoapSwirlStudio.xcodeproj -scheme SoapSwirlStudio -destination platform=iOS Simulator,name=iPhone 17",
+      "status": "pass",
+      "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+      "markers": [
+        "** TEST SUCCEEDED **",
+        "PATCHBACK_RUNTIME_WALKTHROUGH",
+        "PATCHBACK_PERSISTENCE_RELAUNCH_READBACK",
+        "PATCHBACK_STOREKIT_SMOKE",
+        "PATCHBACK_LEGAL_PRIVACY_SURFACE"
+      ]
+    },
+    {
+      "check": "xcodebuild build -configuration Release -destination generic/platform=iOS Simulator",
+      "status": "pass",
+      "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+      "markers": [
+        "** BUILD SUCCEEDED **"
+      ]
+    },
+    {
+      "check": "xcodebuild archive -destination generic/platform=iOS",
+      "status": "blocked_by_signing",
+      "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+      "markers": [
+        "Signing for \"SoapSwirlStudio\" requires a development team",
+        "** ARCHIVE FAILED **"
+      ]
+    },
+    {
+      "check": "xcrun simctl install/launch/screenshot Release simulator app",
+      "status": "pass",
+      "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+      "screenshot_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png"
+    },
+    {
+      "check": "git diff --check",
+      "status": "pass",
+      "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/git_diff_check.log"
+    }
+  ],
+  "blocker_resolution": {
+    "rough_app_runtime_evidence_missing": "patched_with_xcode_simulator_test_and_launch_evidence",
+    "rough_app_persistence_evidence_missing": "patched_with_simulator_xcode_relaunch_readback_marker",
+    "rough_app_iap_storekit_config_missing": "patched_with_tracked_storekit_config_scheme_and_unavailable_purchase_fallback_smoke",
+    "rough_app_legal_surface_missing": "patched_with_reachable_privacy_policy_user_agreement_surface",
+    "rough_app_release_readiness_evidence_missing": "patched_with_release_simulator_build_and_signing_limitation_report"
+  },
+  "remaining_blockers": [
+    {
+      "blocker_code": "ios_archive_signing_development_team_missing",
+      "severity": "release_signing_limitation",
+      "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+      "exact_message": "Signing for \"SoapSwirlStudio\" requires a development team. Select a development team in the Signing & Capabilities editor."
+    }
+  ],
+  "acceptance_checks": {
+    "runtime_markers": {
+      "xcodebuild_test_succeeded": true,
+      "simulator_install_launch_logged": true,
+      "release_simulator_build_succeeded": true,
+      "create_edit_delete_save_failure_app_intent_marker": true,
+      "persistence_relaunch_readback_marker": true,
+      "storekit_smoke_marker": true,
+      "legal_privacy_surface_marker": true
+    },
+    "release_checks": {
+      "xcodebuild_test": "pass",
+      "release_simulator_build": "pass",
+      "archive_attempt": "blocked_by_signing",
+      "privacy_compliance": "pass",
+      "iap_acceptance": "pass_with_storekit_unavailable_fallback",
+      "simulator_install_launch": "pass"
+    }
+  },
+  "skill_ids_used": [
+    "factory-package-improver",
+    "package-completeness-patchback",
+    "build-ios-apps",
+    "test-xcode",
+    "ios-iap-implementation",
+    "ios-iap-acceptance",
+    "ios-privacy-implementation",
+    "ios-compliance-acceptance",
+    "ios_runtime_acceptance",
+    "ios-debugger-agent",
+    "swiftui-ui-patterns",
+    "swiftui-view-refactor",
+    "taste-skill"
+  ],
+  "guardrails_observed": [
+    "no photos/media attachment added",
+    "no ATT/tracking added",
+    "no consumable credits/subscription conversion",
+    "no backend/login/cloud AI added",
+    "base creation remains free"
+  ]
+}

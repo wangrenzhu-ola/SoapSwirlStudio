@@ -1,0 +1,33 @@
+{
+  "identifier" : "com.soapswirl.studio.storekit.local",
+  "nonRenewingSubscriptions" : [
+  ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "soapswirl-premium-localpacks",
+      "localizations" : [
+        {
+          "description" : "Unlock optional local soap loaf, swirl path, and cut-face visual theme packs. Base sketch creation remains free.",
+          "displayName" : "Premium Local Packs",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.soapswirl.studio.premium.localpacks",
+      "referenceName" : "SoapSwirl Premium Local Packs",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : true,
+    "_locale" : "en_US",
+    "_storefront" : "USA"
+  },
+  "subscriptionGroups" : [
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

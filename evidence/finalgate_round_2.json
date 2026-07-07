@@ -1,0 +1,712 @@
+{
+  "schema_version": "outercore.agent_result.v1",
+  "agent_name": "FinalGateAgent",
+  "status": "PASS",
+  "created_at": "2026-07-07T14:27:04.031743Z",
+  "input_refs": [
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/goal_manifest.json",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/product_goal.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/package_goal_map.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_gates.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/current_version_requirements.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/feature_blocks.md",
+    "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_matrix.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/rough_app_build.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/finalgate_round_1_clean.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/package_patch_round_1.json",
+    "/Users/wangrenzhu/work/AI-Infra/app-factory-command-center/skills/finalgate-package-completeness-audit/SKILL.md"
+  ],
+  "output_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/finalgate_round_2.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patch_spec_round_2.json",
+    "/Users/wangrenzhu/work/AI-Infra/app-factory-command-center/final_gate_verdict.json"
+  ],
+  "evidence_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/package_patch_round_1.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/patchback_evidence_ledger.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/head_readback.txt",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/git_diff_check.log"
+  ],
+  "repo_refs": [
+    "/Users/wangrenzhu/work/SoapSwirlStudio",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj",
+    "/Users/wangrenzhu/work/SoapSwirlStudio/rough_app_build.json",
+    "git:1825b903b8f5ed71a87165411f3bc51626371861"
+  ],
+  "blockers": [],
+  "handoff": {
+    "handoff_next": "DeliveryReporterAgent"
+  },
+  "final_gate_verdict": {
+    "schema_version": "appfactory.final_gate.patchable.v1",
+    "agent_name": "FinalGateAgent",
+    "accepted": true,
+    "status": "PASS",
+    "created_at": "2026-07-07T14:27:04.031743Z",
+    "audit_round": 2,
+    "audit_mode": "read_only_reverification",
+    "repo_path": "/Users/wangrenzhu/work/SoapSwirlStudio",
+    "repo_url": "https://github.com/wangrenzhu-ola/SoapSwirlStudio.git",
+    "branch": "codex/soapswirl-completeness-patchback",
+    "source_commit": "1825b903b8f5ed71a87165411f3bc51626371861",
+    "pm_bundle_ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio",
+    "rough_app_build_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/rough_app_build.json",
+    "previous_verdict_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/finalgate_round_1_clean.json",
+    "package_patch_report_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/package_patch_round_1.json",
+    "acceptance_matrix_ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_matrix.json",
+    "package_goal_map_ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/package_goal_map.md",
+    "finalgate_skill_ref": "/Users/wangrenzhu/work/AI-Infra/app-factory-command-center/skills/finalgate-package-completeness-audit/SKILL.md",
+    "round_1_blocker_resolution": [
+      {
+        "blocker_code": "rough_app_runtime_evidence_missing",
+        "round_1_severity": "P0",
+        "status": "resolved",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png"
+        ]
+      },
+      {
+        "blocker_code": "rough_app_persistence_evidence_missing",
+        "round_1_severity": "P0",
+        "status": "resolved",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlStore.swift"
+        ]
+      },
+      {
+        "blocker_code": "rough_app_iap_storekit_config_missing",
+        "round_1_severity": "P0",
+        "status": "resolved",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/StoreKit/SoapSwirlStudio.storekit",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/xcshareddata/xcschemes/SoapSwirlStudio.xcscheme",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+        ]
+      },
+      {
+        "blocker_code": "rough_app_legal_surface_missing",
+        "round_1_severity": "P1",
+        "status": "resolved",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/LegalPrivacyView.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/Docs/PrivacyPolicy.md",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PrivacyInfo.xcprivacy",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+        ]
+      },
+      {
+        "blocker_code": "rough_app_release_readiness_evidence_missing",
+        "round_1_severity": "P1",
+        "status": "resolved",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json"
+        ]
+      }
+    ],
+    "blockers": [],
+    "non_blocking_limitations": [
+      {
+        "code": "ios_archive_signing_development_team_missing",
+        "classification": "release_signing_limitation",
+        "evidence_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+        "rationale": "Release simulator build passed and the archive failure message is limited to missing Apple Developer Team/signing identity."
+      }
+    ],
+    "readback_consistency": {
+      "current_head": "1825b903b8f5ed71a87165411f3bc51626371861",
+      "package_patch_head_commit": "ec8bdfc425e2a8ee5c08be5bcb30e1d2e16100c0",
+      "package_patch_head_matches_current_head": false,
+      "runtime_evidence_git_head": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+      "release_readiness_git_head": "678c3b7b447c2407d9e747c70bdde5d32c3b90b4",
+      "current_head_delta_from_package_patch_head": [
+        "A\tevidence/package_patch_round_1.json",
+        "A\tevidence/patchback_round_1/git_diff_check.log"
+      ],
+      "current_head_delta_from_runtime_evidence_head": [
+        "A\tevidence/finalgate_round_1_clean.json",
+        "A\tevidence/package_patch_round_1.json",
+        "A\tevidence/patch_spec_round_1_clean.json",
+        "A\tevidence/patchback_round_1/archive_status.txt",
+        "A\tevidence/patchback_round_1/git_diff_check.log",
+        "A\tevidence/patchback_round_1/head_readback.txt",
+        "A\tevidence/patchback_round_1/ios_compliance_acceptance.json",
+        "A\tevidence/patchback_round_1/ios_iap_acceptance.json",
+        "A\tevidence/patchback_round_1/patchback_evidence_ledger.json",
+        "A\tevidence/patchback_round_1/release_readiness_report.json",
+        "A\tevidence/patchback_round_1/runtime_walkthrough_readback.json",
+        "A\tevidence/patchback_round_1/simulator_install_launch_final_head.log",
+        "A\tevidence/patchback_round_1/soapswirl_release_launch.png",
+        "A\tevidence/patchback_round_1/xcodebuild_archive_attempt.log",
+        "A\tevidence/patchback_round_1/xcodebuild_list_final_head.log",
+        "A\tevidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+        "A\tevidence/patchback_round_1/xcodebuild_test_final_head.log",
+        "M\trough_app_build.json"
+      ],
+      "acceptance_affecting_delta_after_runtime_evidence": false,
+      "rationale": "HEAD mismatch is sidecar-only after evidence/runtime code commit; product source/config inspected for acceptance is unchanged."
+    },
+    "marker_readback": {
+      "test_succeeded": true,
+      "runtime_walkthrough": true,
+      "persistence_relaunch_readback": true,
+      "storekit_smoke": true,
+      "legal_privacy_surface": true,
+      "release_simulator_build_succeeded": true,
+      "archive_failed_for_development_team_only": true,
+      "simulator_launch_bundle_id": true,
+      "simulator_screenshot_written": true
+    },
+    "evidence_ref_readability": {
+      "status": "PASS",
+      "refs": [
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/goal_manifest.json",
+          "readable": true,
+          "size_bytes": 9117
+        },
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/product_goal.md",
+          "readable": true,
+          "size_bytes": 1378
+        },
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/package_goal_map.md",
+          "readable": true,
+          "size_bytes": 3936
+        },
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance.md",
+          "readable": true,
+          "size_bytes": 601
+        },
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_gates.md",
+          "readable": true,
+          "size_bytes": 393
+        },
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/current_version_requirements.md",
+          "readable": true,
+          "size_bytes": 536
+        },
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/feature_blocks.md",
+          "readable": true,
+          "size_bytes": 424
+        },
+        {
+          "ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_matrix.json",
+          "readable": true,
+          "size_bytes": 6723
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/package_patch_round_1.json",
+          "readable": true,
+          "size_bytes": 8764
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/patchback_evidence_ledger.json",
+          "readable": true,
+          "size_bytes": 1327
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+          "readable": true,
+          "size_bytes": 1758
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+          "readable": true,
+          "size_bytes": 43640
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+          "readable": true,
+          "size_bytes": 3267
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+          "readable": true,
+          "size_bytes": 1866
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+          "readable": true,
+          "size_bytes": 986
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png",
+          "readable": true,
+          "size_bytes": 2878303
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+          "readable": true,
+          "size_bytes": 1247
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+          "readable": true,
+          "size_bytes": 959
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json",
+          "readable": true,
+          "size_bytes": 2098
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/head_readback.txt",
+          "readable": true,
+          "size_bytes": 180
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/git_diff_check.log",
+          "readable": true,
+          "size_bytes": 5
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/AppView.swift",
+          "readable": true,
+          "size_bytes": 1771
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlWallView.swift",
+          "readable": true,
+          "size_bytes": 6993
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/ScentColorSetupView.swift",
+          "readable": true,
+          "size_bytes": 5746
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlPathSketcherView.swift",
+          "readable": true,
+          "size_bytes": 5421
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlDetailView.swift",
+          "readable": true,
+          "size_bytes": 4535
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlStore.swift",
+          "readable": true,
+          "size_bytes": 5415
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/Models.swift",
+          "readable": true,
+          "size_bytes": 4338
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/VisualComponents.swift",
+          "readable": true,
+          "size_bytes": 5297
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumPackStore.swift",
+          "readable": true,
+          "size_bytes": 3216
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumLocalPacksView.swift",
+          "readable": true,
+          "size_bytes": 2467
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/StoreKit/SoapSwirlStudio.storekit",
+          "readable": true,
+          "size_bytes": 872
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/LegalPrivacyView.swift",
+          "readable": true,
+          "size_bytes": 2494
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PrivacyInfo.xcprivacy",
+          "readable": true,
+          "size_bytes": 397
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlIntents.swift",
+          "readable": true,
+          "size_bytes": 1646
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudioTests/SoapSwirlPatchbackAcceptanceTests.swift",
+          "readable": true,
+          "size_bytes": 6439
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/Docs/PrivacyPolicy.md",
+          "readable": true,
+          "size_bytes": 1375
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/ios/package_manifest.json",
+          "readable": true,
+          "size_bytes": 612
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/project.pbxproj",
+          "readable": true,
+          "size_bytes": 16305
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/xcshareddata/xcschemes/SoapSwirlStudio.xcscheme",
+          "readable": true,
+          "size_bytes": 3806
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/AI-Infra/app-factory-command-center/skills/finalgate-package-completeness-audit/SKILL.md",
+          "readable": true,
+          "size_bytes": 4338
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/rough_app_build.json",
+          "readable": true,
+          "size_bytes": 5798
+        },
+        {
+          "ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/finalgate_round_1_clean.json",
+          "readable": true,
+          "size_bytes": 38130
+        }
+      ]
+    },
+    "final_gate_checks": [
+      {
+        "surface": "repo_hygiene",
+        "status": "PASS",
+        "evidence_refs": [
+          "git ls-files",
+          "git status --short --branch"
+        ],
+        "rationale": "No tracked generated build/cache artifacts or tracked temp files were found; ignored evidence/.DS_Store is not tracked."
+      },
+      {
+        "surface": "git_head_and_patch_readback",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/package_patch_round_1.json",
+          "git diff 678c3b7..HEAD",
+          "git diff ec8bdfc..HEAD"
+        ],
+        "rationale": "Current HEAD 1825b903 includes PackageDelivery head ec8bdfc plus sidecar-only package_patch/git_diff_check files; no product source/config changes after runtime evidence commit 678c3b7 affect acceptance."
+      },
+      {
+        "surface": "runtime_evidence",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png"
+        ],
+        "rationale": "Readable Xcode/Simulator evidence includes test success, complete runtime walkthrough markers, install/launch bundle id, and release screenshot."
+      },
+      {
+        "surface": "real_interaction_loop",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlWallView.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/ScentColorSetupView.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlPathSketcherView.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlDetailView.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+        ],
+        "rationale": "Create/edit/save/delete/save-failure/App Intent fallback markers prove non-static, non-sample-only interaction loop."
+      },
+      {
+        "surface": "persistence",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlStore.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json"
+        ],
+        "rationale": "Local JSON store plus PATCHBACK_PERSISTENCE_RELAUNCH_READBACK prove save/reopen/readback."
+      },
+      {
+        "surface": "visual_runtime",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/VisualComponents.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png"
+        ],
+        "rationale": "Normal runtime UI visibly renders handmade soap loaf, swirl path, and cut-face preview slots required by REQ-VIS-001."
+      },
+      {
+        "surface": "privacy_legal",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/LegalPrivacyView.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/Docs/PrivacyPolicy.md",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PrivacyInfo.xcprivacy",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json"
+        ],
+        "rationale": "Reachable legal/privacy surface, no tracking/no collected data PrivacyInfo, local-only copy, and compliance report are aligned."
+      },
+      {
+        "surface": "monetization_iap",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/StoreKit/SoapSwirlStudio.storekit",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/xcshareddata/xcschemes/SoapSwirlStudio.xcscheme",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+        ],
+        "rationale": "PM Premium model remains non-consumable local packs; StoreKit config is present/wired and base creation is not blocked."
+      },
+      {
+        "surface": "release_readiness",
+        "status": "PASS_WITH_SIGNING_LIMITATION",
+        "evidence_refs": [
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/project.pbxproj"
+        ],
+        "rationale": "Release simulator build passes; bundle id/version/locale/privacy/IAP are readable. Archive failure is exactly missing Apple Developer Team, treated as release signing limitation rather than product blocker."
+      },
+      {
+        "surface": "conditional_unrequested_capabilities",
+        "status": "PASS",
+        "rationale": "PM boundary does not require camera/photo-library media attachment, ATT/tracking, consumable credits, backend/login, subscriptions, or five-tab IA. No blockers were generated for unrequested capabilities."
+      },
+      {
+        "surface": "ai_capability",
+        "status": "PASS",
+        "evidence_refs": [
+          "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/goal_manifest.json",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/ScentColorSetupView.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlIntents.swift",
+          "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+        ],
+        "rationale": "Selected AI capability is local/system-assisted draft capture with App Intent/manual fallback; no network AI/chat required."
+      }
+    ],
+    "final_gate_source_scorecard": {
+      "schema_version": "appfactory.final_gate_source_scorecard.v1",
+      "score_authority": "FinalGateAgent",
+      "functionality_implementation_score": 99,
+      "completeness_score": 97,
+      "requirement_results": [
+        {
+          "requirement_id": "REQ-CRUD-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlWallView.swift:12-58",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/ScentColorSetupView.swift:20-49",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlPathSketcherView.swift:72-125",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlDetailView.swift:45-93"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+          ],
+          "deduction_points": 0,
+          "rationale": "Create/edit/save/delete and delete-confirm flows are source-backed and covered by PATCHBACK_RUNTIME_WALKTHROUGH."
+        },
+        {
+          "requirement_id": "REQ-PERSIST-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlStore.swift:27-82,117-124",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudioTests/SoapSwirlPatchbackAcceptanceTests.swift:41-55"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json"
+          ],
+          "deduction_points": 0,
+          "rationale": "PATCHBACK_PERSISTENCE_RELAUNCH_READBACK proves same saved title/id reloads from local JSON."
+        },
+        {
+          "requirement_id": "REQ-VIS-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/VisualComponents.swift:3-68",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlWallView.swift:80-99"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png"
+          ],
+          "deduction_points": 0,
+          "rationale": "Runtime screenshot visibly renders handmade soap loaf, swirl path, and cut-face preview."
+        },
+        {
+          "requirement_id": "REQ-EMPTY-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlWallView.swift:12-14,107-124"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png"
+          ],
+          "deduction_points": 0,
+          "rationale": "Swirl Wall empty/start path and product-specific visual treatment are present; starter examples are disclosed."
+        },
+        {
+          "requirement_id": "REQ-ERROR-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlPathSketcherView.swift:57-69,80-85,115-125",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudioTests/SoapSwirlPatchbackAcceptanceTests.swift:24-28"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+          ],
+          "deduction_points": 0,
+          "rationale": "Simulated save failure preserves draft/readback marker."
+        },
+        {
+          "requirement_id": "REQ-PRIVACY-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/VisualComponents.swift:110-128",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/LegalPrivacyView.swift:3-38",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/Docs/PrivacyPolicy.md:1-20",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PrivacyInfo.xcprivacy:5-12"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+          ],
+          "deduction_points": 0,
+          "rationale": "Reachable Privacy Policy/User Agreement and no tracking/no collected data manifest are aligned."
+        },
+        {
+          "requirement_id": "REQ-PREMIUM-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumPackStore.swift:18-76",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumLocalPacksView.swift:25-45",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/StoreKit/SoapSwirlStudio.storekit",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/xcshareddata/xcschemes/SoapSwirlStudio.xcscheme"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+          ],
+          "deduction_points": 0,
+          "rationale": "StoreKit non-consumable local packs config is tracked/wired; base creation remains free."
+        },
+        {
+          "requirement_id": "REQ-AI-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/ScentColorSetupView.swift:32-69"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+          ],
+          "deduction_points": 0,
+          "rationale": "On-device starter suggestions are editable/skippable/user-confirmed; no cloud/chat required."
+        },
+        {
+          "requirement_id": "REQ-APPINTENT-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlIntents.swift:4-40",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlStore.swift:103-109",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudioTests/SoapSwirlPatchbackAcceptanceTests.swift:29-32"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log"
+          ],
+          "deduction_points": 0,
+          "rationale": "Quick capture intent source compiles and acceptance marker covers editable quick draft/manual fallback."
+        },
+        {
+          "requirement_id": "REQ-LOCALE-001",
+          "status": "pass",
+          "source_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/ios/package_manifest.json:5",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlWallView.swift:67-78",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/Docs/PrivacyPolicy.md:3"
+          ],
+          "evidence_refs": [
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png",
+            "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json"
+          ],
+          "deduction_points": 0,
+          "rationale": "User-facing surfaces and metadata are en-US."
+        }
+      ],
+      "deductions": [
+        {
+          "surface": "release_signing",
+          "points": 1,
+          "non_blocking": true,
+          "rationale": "Physical iOS archive/export is limited by missing Apple Developer Team only; release simulator build, bundle/version, privacy/IAP, and exact archive failure evidence are present."
+        },
+        {
+          "surface": "evidence_head_delta",
+          "points": 1,
+          "non_blocking": true,
+          "rationale": "Runtime evidence git_head=678c3b7; current HEAD adds only sidecar evidence/package_patch files and rough_app_build readback, with no product source/config delta affecting acceptance."
+        }
+      ],
+      "source_readback_refs": [
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/AppView.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlWallView.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/ScentColorSetupView.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SwirlPathSketcherView.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlDetailView.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlStore.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/Models.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/VisualComponents.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumPackStore.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumLocalPacksView.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/StoreKit/SoapSwirlStudio.storekit",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/LegalPrivacyView.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PrivacyInfo.xcprivacy",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlIntents.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudioTests/SoapSwirlPatchbackAcceptanceTests.swift",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/Docs/PrivacyPolicy.md",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/ios/package_manifest.json",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/project.pbxproj",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/xcshareddata/xcschemes/SoapSwirlStudio.xcscheme"
+      ],
+      "runtime_evidence_refs": [
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/package_patch_round_1.json",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/patchback_evidence_ledger.json",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/runtime_walkthrough_readback.json",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_test_final_head.log",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_release_simulator_build.log",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/xcodebuild_archive_attempt.log",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/simulator_install_launch_final_head.log",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/soapswirl_release_launch.png",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_iap_acceptance.json",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/ios_compliance_acceptance.json",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/release_readiness_report.json",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/head_readback.txt",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/patchback_round_1/git_diff_check.log"
+      ]
+    },
+    "handoff_next": "DeliveryReporterAgent"
+  }
+}

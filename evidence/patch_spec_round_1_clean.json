@@ -1,0 +1,172 @@
+{
+  "schema_version": "appfactory.patch_spec.v1",
+  "patch_spec_id": "patch-spec-round-1-clean-goal-010-soapswirl-studio",
+  "created_at": "2026-07-07T14:09:16.723638Z",
+  "target_worker_role": "PackageDeliveryAgent",
+  "source": "FinalGateAgent",
+  "reason": "final_gate_blocked_rough_app_completeness",
+  "repo_path": "/Users/wangrenzhu/work/SoapSwirlStudio",
+  "source_commit": "b08d29f1418be6bbd434fd4a2f2c1934d827746d",
+  "pm_bundle_ref": "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio",
+  "previous_verdict_ref": "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/finalgate_round_1_clean.json",
+  "accepted": false,
+  "blockers": [
+    {
+      "blocker_code": "rough_app_runtime_evidence_missing",
+      "severity": "P0",
+      "problem_source_refs": [
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_matrix.json:requirements[*].required_runtime_evidence",
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance.md:1-8",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/rough_app_build.json:self_check_refs",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/simulator_runtime.log",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/soapswirl_launch.png"
+      ],
+      "finding": "Readable simulator evidence proves build/install/launch and a single first-screen screenshot only. It does not provide runtime readback for PM-required create, edit, delete, save-failure, Premium, App Intent/manual fallback, or relaunch paths.",
+      "expected_fix": "Produce fresh Xcode/Simulator runtime evidence for the complete PM normal flow: first-launch Swirl Wall, Scent Color Setup creation, Swirl Path Sketcher edit/save, detail, delete confirmation, save-failure recovery, Premium entry/fallback, and App Intent/manual fallback. Update rough_app_build/self-check refs to the new readable artifacts.",
+      "required_evidence": [
+        "fresh simulator install/launch log with bundle id, git HEAD, and timestamp",
+        "UI walkthrough log, accessibility snapshot, video, or screenshot set covering each PM-required path",
+        "updated rough_app_build.json and evidence ledger refs from the current source commit",
+        "Xcode/Simulator evidence, not SwiftPM-only or source-only proof"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_persistence_evidence_missing",
+      "severity": "P0",
+      "problem_source_refs": [
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/product_goal.md:Core flows/Data-persistence expectations",
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_matrix.json:REQ-PERSIST-001",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/SoapSwirlStore.swift:27-30,36-50,52-82,117-124",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudioTests/SoapSwirlStoreTests.swift:6-31",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/simulator_runtime.log"
+      ],
+      "finding": "Source and unit tests implement JSON save/reload, but the evidence set lacks simulator save/terminate/relaunch/readback proof for a user-created soap swirl sketch.",
+      "expected_fix": "Run and record a simulator persistence acceptance path that creates and saves a named user sketch, terminates/relaunches the app, and reads the same sketch back on Swirl Wall/detail. Keep unit tests as supporting evidence only.",
+      "required_evidence": [
+        "simulator walkthrough/readback showing the same saved title/id before and after relaunch",
+        "targeted persistence test still passing",
+        "runtime log or snapshots tied to current git HEAD",
+        "updated evidence ledger/runtime refs"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_iap_storekit_config_missing",
+      "severity": "P0",
+      "problem_source_refs": [
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/goal_manifest.json:required_skill_refs",
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/product_goal.md:Monetization/IAP expectation",
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/package_goal_map.md:StoreKit 2 / IAP 预期",
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/acceptance_matrix.json:REQ-PREMIUM-001",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumPackStore.swift:18-76",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PremiumLocalPacksView.swift:25-45",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/ios/package_manifest.json:9"
+      ],
+      "finding": "PM requires StoreKit 2 Premium local packs. Source calls StoreKit APIs for com.soapswirl.studio.premium.localpacks, but no tracked .storekit configuration or equivalent IAP smoke/readback evidence exists.",
+      "expected_fix": "Add tracked StoreKit testing configuration or equivalent App Store Connect/IAP smoke evidence for the Premium product id, wire it into the scheme if using local StoreKit testing, and prove Premium remains non-blocking for base creation.",
+      "required_evidence": [
+        "tracked .storekit file or equivalent IAP configuration/readback for com.soapswirl.studio.premium.localpacks",
+        "xcodebuild/simulator StoreKit smoke evidence for product lookup and purchase/restore/unavailable fallback",
+        "runtime evidence that base Scent Color Setup and Swirl Path Sketcher remain free",
+        "updated package manifest/ledger refs"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_legal_surface_missing",
+      "severity": "P1",
+      "problem_source_refs": [
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/product_goal.md:App Store readiness target/Privacy-review notes",
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/package_goal_map.md:App Store Review / 隐私 / HIG 边界",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/VisualComponents.swift:110-123",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio/PrivacyInfo.xcprivacy:5-12",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/README.md:5-8",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/ios/package_manifest.json:8"
+      ],
+      "finding": "The app has a local privacy note and PrivacyInfo.xcprivacy, but no reachable Privacy Policy/User Agreement or release metadata legal surface for the PM App Store-ready/privacy target.",
+      "expected_fix": "Add release-ready en-US legal/privacy surfaces for the local-only/no-tracking model and make them reachable from app UI or release metadata without adding unrequested tracking, backend, photos, subscriptions, or credits.",
+      "required_evidence": [
+        "source refs for reachable Privacy Policy and/or User Agreement surface or metadata refs",
+        "runtime screenshot/accessibility evidence showing the legal/privacy entry is reachable",
+        "PrivacyInfo.xcprivacy readback remains aligned with no tracking/no collected data",
+        "App Store metadata/readiness refs in en-US"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_release_readiness_evidence_missing",
+      "severity": "P1",
+      "problem_source_refs": [
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/product_goal.md:App Store readiness target",
+        "/Users/wangrenzhu/.local/state/app-factory-command-center/agent_gateway/jobs/codex-factory-control-singleton/PMAgent/product_goal_bundles/goal-010-soapswirl-studio/goal_manifest.json:required_skill_refs",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/SoapSwirlStudio.xcodeproj/project.pbxproj:320-372",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/xcodebuild_build.log",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/evidence/xcodebuild_test.log",
+        "/Users/wangrenzhu/work/SoapSwirlStudio/rough_app_build.json:self_check_refs"
+      ],
+      "finding": "Evidence is Debug simulator build/test/install/launch only. PM target requires App Store-ready SwiftUI with privacy, StoreKit Premium, en-US, and acceptance refs; no archive/export, release-readiness report, signing-limitation statement, ios-compliance, or ios-iap acceptance evidence is present.",
+      "expected_fix": "Produce release-readiness evidence or an explicit signing-limitation release-readiness report: Release configuration build/archive attempt, version/build/bundle-id readback, privacy/IAP metadata checks, and ios-compliance/ios-iap acceptance refs.",
+      "required_evidence": [
+        "Release configuration build/archive/export proof or signed-limitation report with exact blocker if signing is unavailable",
+        "version/build/bundle identifier readback matching PM/release target",
+        "ios-compliance and ios-iap acceptance refs",
+        "updated rough_app_build.json with release readiness refs"
+      ]
+    }
+  ],
+  "required_fixes": [
+    {
+      "blocker_code": "rough_app_runtime_evidence_missing",
+      "expected_fix": "Produce fresh Xcode/Simulator runtime evidence for the complete PM normal flow: first-launch Swirl Wall, Scent Color Setup creation, Swirl Path Sketcher edit/save, detail, delete confirmation, save-failure recovery, Premium entry/fallback, and App Intent/manual fallback. Update rough_app_build/self-check refs to the new readable artifacts.",
+      "required_evidence": [
+        "fresh simulator install/launch log with bundle id, git HEAD, and timestamp",
+        "UI walkthrough log, accessibility snapshot, video, or screenshot set covering each PM-required path",
+        "updated rough_app_build.json and evidence ledger refs from the current source commit",
+        "Xcode/Simulator evidence, not SwiftPM-only or source-only proof"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_persistence_evidence_missing",
+      "expected_fix": "Run and record a simulator persistence acceptance path that creates and saves a named user sketch, terminates/relaunches the app, and reads the same sketch back on Swirl Wall/detail. Keep unit tests as supporting evidence only.",
+      "required_evidence": [
+        "simulator walkthrough/readback showing the same saved title/id before and after relaunch",
+        "targeted persistence test still passing",
+        "runtime log or snapshots tied to current git HEAD",
+        "updated evidence ledger/runtime refs"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_iap_storekit_config_missing",
+      "expected_fix": "Add tracked StoreKit testing configuration or equivalent App Store Connect/IAP smoke evidence for the Premium product id, wire it into the scheme if using local StoreKit testing, and prove Premium remains non-blocking for base creation.",
+      "required_evidence": [
+        "tracked .storekit file or equivalent IAP configuration/readback for com.soapswirl.studio.premium.localpacks",
+        "xcodebuild/simulator StoreKit smoke evidence for product lookup and purchase/restore/unavailable fallback",
+        "runtime evidence that base Scent Color Setup and Swirl Path Sketcher remain free",
+        "updated package manifest/ledger refs"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_legal_surface_missing",
+      "expected_fix": "Add release-ready en-US legal/privacy surfaces for the local-only/no-tracking model and make them reachable from app UI or release metadata without adding unrequested tracking, backend, photos, subscriptions, or credits.",
+      "required_evidence": [
+        "source refs for reachable Privacy Policy and/or User Agreement surface or metadata refs",
+        "runtime screenshot/accessibility evidence showing the legal/privacy entry is reachable",
+        "PrivacyInfo.xcprivacy readback remains aligned with no tracking/no collected data",
+        "App Store metadata/readiness refs in en-US"
+      ]
+    },
+    {
+      "blocker_code": "rough_app_release_readiness_evidence_missing",
+      "expected_fix": "Produce release-readiness evidence or an explicit signing-limitation release-readiness report: Release configuration build/archive attempt, version/build/bundle-id readback, privacy/IAP metadata checks, and ios-compliance/ios-iap acceptance refs.",
+      "required_evidence": [
+        "Release configuration build/archive/export proof or signed-limitation report with exact blocker if signing is unavailable",
+        "version/build/bundle identifier readback matching PM/release target",
+        "ios-compliance and ios-iap acceptance refs",
+        "updated rough_app_build.json with release readiness refs"
+      ]
+    }
+  ],
+  "guardrails": [
+    "Do not add photos/media attachment, ATT/tracking, consumable credits, backend/login, cloud AI, or five-tab IA unless PM docs change; current PM bundle does not explicitly require them.",
+    "Do not close source/runtime blockers with sidecar-only edits; runtime and persistence blockers require fresh readable Xcode/Simulator evidence from current source.",
+    "Preserve the Premium local-packs model and free base creation; do not convert to subscriptions, credits, or paywalled creation."
+  ],
+  "handoff_next": "PackageDeliveryAgent"
+}
